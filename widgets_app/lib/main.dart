@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:widgets_app/widgets/button.dart';
+import 'package:widgets_app/widgets/column_row.dart';
 import 'package:widgets_app/widgets/container.dart';
+import 'package:widgets_app/widgets/stack.dart';
+import 'package:widgets_app/widgets/text.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,6 +60,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       );
                     },
                     child: const Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20))),
                         color: Colors.teal,
                         child: Center(
                           child: Text(
@@ -67,17 +74,100 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                   )),
               Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Card(
-                    color: Colors.teal,
-                    child: Center(
-                      child: Text(
-                        'Card 2',
-                        style: TextStyle(color: Colors.white, fontSize: 25),
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ExampleStack()),
+                    );
+                  },
+                  child: const Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                      color: Colors.teal,
+                      child: Center(
+                        child: Text(
+                          'Stack',
+                          style: TextStyle(color: Colors.white, fontSize: 25),
+                        ),
+                      )
+                      // This trailing comma makes auto-formatting nicer for build methods.
                       ),
-                    )
-                    // This trailing comma makes auto-formatting nicer for build methods.
-                    ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ExampleColumnRow()),
+                    );
+                  },
+                  child: const Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                      color: Colors.teal,
+                      child: Center(
+                        child: Text(
+                          'Column/Row',
+                          style: TextStyle(color: Colors.white, fontSize: 25),
+                        ),
+                      )
+                      // This trailing comma makes auto-formatting nicer for build methods.
+                      ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ExampleText()),
+                    );
+                  },
+                  child: const Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                      color: Colors.teal,
+                      child: Center(
+                        child: Text(
+                          'Text',
+                          style: TextStyle(color: Colors.white, fontSize: 25),
+                        ),
+                      )
+                      // This trailing comma makes auto-formatting nicer for build methods.
+                      ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ExampleButton()),
+                    );
+                  },
+                  child: const Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                      color: Colors.teal,
+                      child: Center(
+                        child: Text(
+                          'Buttons',
+                          style: TextStyle(color: Colors.white, fontSize: 25),
+                        ),
+                      )
+                      // This trailing comma makes auto-formatting nicer for build methods.
+                      ),
+                ),
               )
             ]));
   }
