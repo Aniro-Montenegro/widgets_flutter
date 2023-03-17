@@ -42,9 +42,12 @@ class ImageExample extends StatelessWidget {
             const Center(
               child: SizedBox(
                 width: 200,
-                child: Image(
-                  image: NetworkImage('https://picsum.photos/250?image=9'),
-                  fit: BoxFit.cover,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+                  child: Image(
+                    image: NetworkImage('https://picsum.photos/250?image=9'),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
