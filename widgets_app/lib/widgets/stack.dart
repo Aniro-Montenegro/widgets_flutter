@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class ExampleStack extends StatefulWidget {
   const ExampleStack({super.key});
@@ -57,7 +55,7 @@ class _ExampleStackState extends State<ExampleStack> {
                 height: 100,
                 color: Colors.blue,
                 child: ListView(
-                  children: [
+                  children: const [
                     Text('Container'),
                     Text('Container'),
                     Text('Container'),

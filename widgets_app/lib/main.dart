@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:widgets_app/widgets/button.dart';
 import 'package:widgets_app/widgets/column_row.dart';
 import 'package:widgets_app/widgets/container.dart';
+import 'package:widgets_app/widgets/images.dart';
+import 'package:widgets_app/widgets/linear_progress_indicator.dart';
+import 'package:widgets_app/widgets/list_view_stateless.dart';
 import 'package:widgets_app/widgets/stack.dart';
 import 'package:widgets_app/widgets/text.dart';
 
@@ -163,6 +166,86 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Text(
                           'Buttons',
                           style: TextStyle(color: Colors.white, fontSize: 25),
+                        ),
+                      )
+                      // This trailing comma makes auto-formatting nicer for build methods.
+                      ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const ListViewStatelessExample()),
+                    );
+                  },
+                  child: const Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                      color: Colors.teal,
+                      child: Center(
+                        child: Text(
+                          'List View',
+                          style: TextStyle(color: Colors.white, fontSize: 25),
+                        ),
+                      )
+                      // This trailing comma makes auto-formatting nicer for build methods.
+                      ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const LinearProgressIndicatorExample()),
+                    );
+                  },
+                  child: const Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                      color: Colors.teal,
+                      child: Center(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            'Linear Progress Indicator',
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
+                        ),
+                      )
+                      // This trailing comma makes auto-formatting nicer for build methods.
+                      ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ImageExample()),
+                    );
+                  },
+                  child: const Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                      color: Colors.teal,
+                      child: Center(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            'Imagens',
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
                         ),
                       )
                       // This trailing comma makes auto-formatting nicer for build methods.

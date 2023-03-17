@@ -47,7 +47,7 @@ class _ExampleContainerState extends State<ExampleContainer> {
               height: 350,
               color: Colors.blue,
               child: ListView(
-                children: [
+                children: const [
                   Text('Container'),
                   Text('Container'),
                   Text('Container'),
