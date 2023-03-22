@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widgets_app/data/data_inherited.dart';
 import 'package:widgets_app/widgets/animated_opacity.dart';
 import 'package:widgets_app/widgets/boxdecoration.dart';
 import 'package:widgets_app/widgets/button.dart';
@@ -36,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
     'Animated Opacity': const AnimatedOpacityExample(),
     'Star': const StarExample(),
     'Forms': const FormExample(),
-    'Navigator': const TelaUm(),
+    'Navigator': DadosInherited(child: const TelaUm()),
   };
 
   List<Widget> listWidgets = [];

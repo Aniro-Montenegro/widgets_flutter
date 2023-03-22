@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widgets_app/data/data_inherited.dart';
 import 'package:widgets_app/widgets/navigator/tela_dois.dart';
 
 class TelaUm extends StatefulWidget {
@@ -9,18 +10,20 @@ class TelaUm extends StatefulWidget {
 }
 
 class _TelaUmState extends State<TelaUm> {
+  List<String> dados = <String>[];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Tela Um'),
         ),
-        body: Container(
-            color: Colors.white,
-            child: Center(
+        body: Padding(
+          padding: const EdgeInsets.only(top: 25),
+          child: Container(
+              color: Colors.white,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Center(
                     child: Text('Tela um'),
@@ -28,11 +31,14 @@ class _TelaUmState extends State<TelaUm> {
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 25),
                     child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
+                      onPressed: () async {
+                        final value = await Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const TelaDois()));
+                                builder: (contextNew) => TelaDois(
+                                      telaDoisContext: context,
+                                    )));
+                        setState(() {});
                       },
                       child: const Text('Tela dois'),
                     ),
@@ -45,9 +51,18 @@ class _TelaUmState extends State<TelaUm> {
                       },
                       child: const Text('Tela dois nomeada'),
                     ),
-                  )
+                  ),
+                  ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: DadosInherited.of(context)!.dados.length,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        title: Text(DadosInherited.of(context)!.dados[index]),
+                      );
+                    },
+                  ),
                 ],
-              ),
-            )));
+              )),
+        ));
   }
 }

@@ -82,6 +82,7 @@ class _FormExampleState extends State<FormExample> {
                             if (value!.length < 6) {
                               return 'Password must be at least 6 characters';
                             }
+                            return null;
                           },
                           decoration: const InputDecoration(
                               hintText: 'Enter your password',
@@ -178,7 +179,6 @@ class _FormExampleState extends State<FormExample> {
                           child: ElevatedButton(
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
-                                print('Form is valid');
                               } else {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(
