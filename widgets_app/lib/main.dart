@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/widgets/home_page.dart';
+import 'package:widgets_app/widgets/navigator/tela_dois.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +17,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Widgets App'),
+      routes: {
+        '/tela_dois': (context) => const TelaDois(),
+      },
     );
   }
 }

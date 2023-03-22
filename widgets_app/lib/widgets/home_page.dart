@@ -8,6 +8,7 @@ import 'package:widgets_app/widgets/forms.dart';
 import 'package:widgets_app/widgets/images.dart';
 import 'package:widgets_app/widgets/linear_progress_indicator.dart';
 import 'package:widgets_app/widgets/list_view_stateless.dart';
+import 'package:widgets_app/widgets/navigator/tela_um.dart';
 import 'package:widgets_app/widgets/stack.dart';
 import 'package:widgets_app/widgets/start_classification.dart';
 import 'package:widgets_app/widgets/text.dart';
@@ -35,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
     'Animated Opacity': const AnimatedOpacityExample(),
     'Star': const StarExample(),
     'Forms': const FormExample(),
+    'Navigator': const TelaUm(),
   };
 
   List<Widget> listWidgets = [];
