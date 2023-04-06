@@ -5,6 +5,7 @@ import 'package:widgets_app/widgets/boxdecoration.dart';
 import 'package:widgets_app/widgets/button.dart';
 import 'package:widgets_app/widgets/column_row.dart';
 import 'package:widgets_app/widgets/container.dart';
+import 'package:widgets_app/widgets/expansion_list.dart';
 import 'package:widgets_app/widgets/forms.dart';
 import 'package:widgets_app/widgets/images.dart';
 import 'package:widgets_app/widgets/linear_progress_indicator.dart';
@@ -38,6 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
     'Star': const StarExample(),
     'Forms': const FormExample(),
     'Navigator': DadosInherited(child: const TelaUm()),
+    'ExpansionTile': const ExpansionListpage(),
   };
 
   List<Widget> listWidgets = [];
@@ -78,8 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
           );
         },
         child: Card(
-            shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20))),
+            shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20))),
             color: Colors.teal,
             child: Center(
               child: Padding(
