@@ -7,11 +7,10 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Future.delayed(const Duration(seconds: 2));
+  FlutterNativeSplash.remove();
 
   runApp(const MyApp());
 }
-
-class FlutterNativeSplash {}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
