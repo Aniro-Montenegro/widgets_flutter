@@ -5,6 +5,7 @@ import 'package:widgets_app/widgets/boxdecoration.dart';
 import 'package:widgets_app/widgets/button.dart';
 import 'package:widgets_app/widgets/column_row.dart';
 import 'package:widgets_app/widgets/container.dart';
+import 'package:widgets_app/widgets/dialog_page.dart';
 import 'package:widgets_app/widgets/expansion_list.dart';
 import 'package:widgets_app/widgets/forms.dart';
 import 'package:widgets_app/widgets/images.dart';
@@ -15,6 +16,7 @@ import 'package:widgets_app/widgets/scaffold_messenger.dart';
 import 'package:widgets_app/widgets/stack.dart';
 import 'package:widgets_app/widgets/start_classification.dart';
 import 'package:widgets_app/widgets/text.dart';
+import 'package:widgets_app/widgets/tweenAnimationBuilder.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -41,7 +43,9 @@ class _MyHomePageState extends State<MyHomePage> {
     'Forms': const FormExample(),
     'Navigator': DadosInherited(child: const TelaUm()),
     'ExpansionTile': const ExpansionListpage(),
-    'Scaffold Messenger': const ScaffoldMesengerPage()
+    'Scaffold Messenger': const ScaffoldMesengerPage(),
+    'Dialog': const DialogPage(),
+    'Tween Animation Builder': const TweenAnimationPage()
   };
 
   List<Widget> listWidgets = [];
